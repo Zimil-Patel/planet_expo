@@ -23,7 +23,10 @@ class PlanetScreen extends StatefulWidget {
   State<PlanetScreen> createState() => _PlanetScreenState();
 }
 
-class _PlanetScreenState extends State<PlanetScreen> {
+class _PlanetScreenState extends State<PlanetScreen>
+    with TickerProviderStateMixin {
+  late final AnimationController _mainPlanetAnimationController;
+
   int selectedPlanetIndex = 0; // Track selected planet index
   final PageController _pageController = PageController(viewportFraction: 0.4);
 
@@ -42,6 +45,11 @@ class _PlanetScreenState extends State<PlanetScreen> {
       "name": "Jupiter",
       "image": "assets/gif/jupiter.gif",
       "description": "The Gas Giant",
+    },
+    {
+      "name": "Mercury",
+      "image": "assets/gif/mercury.gif",
+      "description": "The Mercury",
     }
   ];
 
@@ -78,6 +86,22 @@ class _PlanetScreenState extends State<PlanetScreen> {
             ),
           ),
 
+          Positioned(
+            bottom: 97,
+            right: 17,
+            child: Container(
+              height: 86,
+              width: 86,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Colors.orange,
+                  width: 2,
+                ),
+              ),
+            ),
+          ),
+
           // Bottom-Right Planet Selection (Vertical PageView with Fade Effect)
           Positioned(
             bottom: 50,
@@ -89,6 +113,7 @@ class _PlanetScreenState extends State<PlanetScreen> {
                 controller: _pageController,
                 scrollDirection: Axis.vertical,
                 itemCount: planets.length,
+                clipBehavior: Clip.none,
                 onPageChanged: (index) {
                   setState(() {
                     selectedPlanetIndex = index;
@@ -96,7 +121,7 @@ class _PlanetScreenState extends State<PlanetScreen> {
                 },
                 itemBuilder: (context, index) {
                   double opacity = index == selectedPlanetIndex ? 1.0 : 0.5;
-                  double scale = index == selectedPlanetIndex ? 1.2 : 0.8;
+                  double scale = index == selectedPlanetIndex ? 1.08 : 0.6;
 
                   return GestureDetector(
                     onTap: () {
@@ -112,19 +137,10 @@ class _PlanetScreenState extends State<PlanetScreen> {
                       opacity: opacity,
                       child: Transform.scale(
                         scale: scale,
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(vertical: 8),
-                          decoration: BoxDecoration(
-                            border: selectedPlanetIndex == index
-                                ? Border.all(color: Colors.orange, width: 2)
-                                : null,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Image.asset(
-                            planets[index]["image"]!,
-                            height: 50, // Thumbnail size
-                            width: 50,
-                          ),
+                        child: Image.asset(
+                          planets[index]["image"]!,
+                          height: 50, // Thumbnail size
+                          width: 50,
                         ),
                       ),
                     ),
