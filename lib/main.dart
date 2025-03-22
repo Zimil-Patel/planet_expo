@@ -26,6 +26,16 @@ class PlanetScreen extends StatefulWidget {
 class _PlanetScreenState extends State<PlanetScreen>
     with TickerProviderStateMixin {
   late final AnimationController _mainPlanetAnimationController;
+  late final mainPlanetAnimation;
+
+  _initMainPlanetAnimation() {
+    _mainPlanetAnimationController = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 1),
+    );
+
+    mainPlanetAnimation = Tween<Offset>();
+  }
 
   int selectedPlanetIndex = 0; // Track selected planet index
   final PageController _pageController = PageController(viewportFraction: 0.4);
@@ -50,8 +60,39 @@ class _PlanetScreenState extends State<PlanetScreen>
       "name": "Mercury",
       "image": "assets/gif/mercury.gif",
       "description": "The Mercury",
-    }
+    },
+    {
+      "name": "Earth",
+      "image": "assets/gif/earth.gif",
+      "description": "The Life",
+    },
+    {
+      "name": "Uranus",
+      "image": "assets/gif/uranus.gif",
+      "description": "The Uranus",
+    },
+    {
+      "name": "Pluto",
+      "image": "assets/gif/pluto.gif",
+      "description": "The Pluto",
+    },
+    {
+      "name": "Neptune",
+      "image": "assets/gif/neptune.gif",
+      "description": "The Neptune",
+    },
+    {
+      "name": "Saturn",
+      "image": "assets/gif/saturn.gif",
+      "description": "The Saturn",
+    },
   ];
+
+  @override
+  void initState() {
+    _initMainPlanetAnimation();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -139,8 +180,7 @@ class _PlanetScreenState extends State<PlanetScreen>
                         scale: scale,
                         child: Image.asset(
                           planets[index]["image"]!,
-                          height: 50, // Thumbnail size
-                          width: 50,
+                          fit: BoxFit.contain,
                         ),
                       ),
                     ),
