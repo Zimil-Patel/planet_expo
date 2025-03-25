@@ -1,0 +1,131 @@
+{
+  "planets": [
+    {
+      "name": "Sun",
+      "secondName": "The Solar Star",
+      "details": {
+        "Radius": "695,700 km",
+        "Distance from sun": "0 km",
+        "Moons": "None",
+        "Gravity": "274 m/s²",
+        "Tilt of Axis": "7.25",
+        "Length of Year": "N/A",
+        "Length of Day": "25-35 Earth days",
+        "Temperature": "Surface: 5,778 K, Core: ~15 million K"
+      }
+    },
+    {
+      "name": "Mercury",
+      "secondName": "The Swift Planet",
+      "details": {
+        "Radius": "2439.7 km",
+        "Distance from sun": "57.9 mln km",
+        "Moons": "None",
+        "Gravity": "3.7 m/s²",
+        "Tilt of Axis": "0.03",
+        "Length of Year": "88 earth days",
+        "Length of Day": "1407.6 h",
+        "Temperature": "Average 167 C"
+      }
+    },
+    {
+      "name": "Venus",
+      "secondName": "The Morning Star/Evening Star",
+      "details": {
+        "Radius": "6051.8 km",
+        "Distance from sun": "108.2 mln km",
+        "Moons": "None",
+        "Gravity": "8.87 m/s²",
+        "Tilt of Axis": "177",
+        "Length of Year": "224.7 earth days",
+        "Length of Day": "5832.5 h",
+        "Temperature": "Average 464 C"
+      }
+    },
+    {
+      "name": "Earth",
+      "secondName": "The Blue Planet",
+      "details": {
+        "Radius": "6371 km",
+        "Distance from sun": "149.6 mln km",
+        "Moons": "Moon",
+        "Gravity": "9.8 m/s²",
+        "Tilt of Axis": "23.5",
+        "Length of Year": "365.25 earth days",
+        "Length of Day": "24 h",
+        "Temperature": "Average 15 C"
+      }
+    },
+    {
+      "name": "Mars",
+      "secondName": "The Red Planet",
+      "details": {
+        "Radius": "3389.5 km",
+        "Distance from sun": "227.9 mln km",
+        "Moons": "Phobos, Deimos",
+        "Gravity": "3.711 m/s²",
+        "Tilt of Axis": "25",
+        "Length of Year": "687 earth days",
+        "Length of Day": "24 h 37min",
+        "Temperature": "Average -62.78 C"
+      }
+    },
+    {
+       "name": "Jupiter",
+        "secondName": "The Giant Planet",
+        "details":{
+            "Radius": "69911 km",
+            "Distance from sun": "778.5 mln km",
+            "Moons": "Io, Europa, Ganymede, Callisto, and many more",
+            "Gravity": "24.79 m/s²",
+            "Tilt of Axis": "3.13",
+            "Length of Year": "11.86 earth years",
+            "Length of Day": "9 h 56 min",
+            "Temperature": "Average -145 C"
+        }
+    },
+    {
+        "name": "Saturn",
+        "secondName": "The Ringed Planet",
+        "details":{
+            "Radius": "58232 km",
+            "Distance from sun": "1.434 bln km",
+            "Moons": "Titan, Rhea, Iapetus, Dione, Tethys, and many more",
+            "Gravity": "10.44 m/s²",
+            "Tilt of Axis": "26.73",
+            "Length of Year": "29.46 earth years",
+            "Length of Day": "10 h 42 min",
+            "Temperature": "Average -178 C"
+        }
+    },
+    {
+        "name": "Uranus",
+        "secondName": "The Ice Giant",
+        "details":{
+            "Radius": "25362 km",
+            "Distance from sun": "2.871 bln km",
+            "Moons": "Miranda, Ariel, Umbriel, Titania, Oberon, and many more",
+            "Gravity": "8.87 m/s²",
+            "Tilt of Axis": "97.77",
+            "Length of Year": "84.01 earth years",
+            "Length of Day": "17 h 14 min",
+            "Temperature": "Average -224 C"
+        }
+    },
+    {
+        "name": "Neptune",
+        "secondName": "The Windy Planet",
+        "details": {
+            "Radius": "24622 km",
+            "Distance from sun": "4.495 bln km",
+            "Moons": "Triton, Nereid, and many more",
+            "Gravity": "11.15 m/s²",
+            "Tilt of Axis": "28.32",
+            "Length of Year": "164.8 earth years",
+            "Length of Day": "16 h 6 min",
+            "Temperature": "Average -214 C"
+        }
+    }
+
+  ]
+}
