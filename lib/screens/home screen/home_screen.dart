@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:planet_expo/screens/home%20screen/components/home_app_bar.dart';
 import 'package:planet_expo/screens/home%20screen/components/home_thumb_card.dart';
+import 'package:planet_expo/screens/home%20screen/components/planet_list_tile.dart';
+import 'package:planet_expo/utils.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,60 +17,46 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-
-      // App bar
-      appBar: homeAppBar(),
-
       // Body
-      body: Column(
-        children: [
-          // Thumbnail card with explore all planet button
-          HomeThumbnailCard(),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.zero,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            homeAppBar(),
 
-          Expanded(
-            child: ListView(
-              shrinkWrap: true,
-              children: [
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  height: 100,
-                  width: double.infinity,
-                  color: Colors.white12,
+            // Thumbnail card with explore all planet button
+            const HomeThumbnailCard(),
+
+            const Padding(
+              padding: EdgeInsets.only(
+                bottom: 10.0,
+                left: 20,
+              ),
+              child: Text(
+                'Explore Universe',
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 28,
+                  fontWeight: FontWeight.w600,
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  height: 100,
-                  width: double.infinity,
-                  color: Colors.white12,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  height: 100,
-                  width: double.infinity,
-                  color: Colors.white12,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  height: 100,
-                  width: double.infinity,
-                  color: Colors.white12,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  height: 100,
-                  width: double.infinity,
-                  color: Colors.white12,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                  height: 100,
-                  width: double.infinity,
-                  color: Colors.white12,
-                ),
-              ],
+              ),
             ),
-          ),
-        ],
+
+            // All Planet list
+            ListView.separated(
+              padding: EdgeInsets.zero,
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemBuilder: (context, index) => PlanetListTile(index: index),
+              separatorBuilder: (context, index) => const Divider(
+                color: Colors.white10,
+                indent: 120,
+              ),
+              itemCount: planetList.length,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -125,23 +125,26 @@ class _ExploreScreenState extends State<ExploreScreen>
                 const SizedBox(height: 20),
 
                 // Animated planet gif
-                AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 600),
-                  transitionBuilder:
-                      (Widget child, Animation<double> animation) {
-                    final slideAnimation = Tween<Offset>(
-                      begin: const Offset(-1.5, 0), // New one comes from left
-                      end: const Offset(0, 0),
-                    ).animate(animation);
+                Hero(
+                  tag: planetList[selectedPlanetIndex].name,
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 600),
+                    transitionBuilder:
+                        (Widget child, Animation<double> animation) {
+                      final slideAnimation = Tween<Offset>(
+                        begin: const Offset(-1.5, 0), // New one comes from left
+                        end: const Offset(0, 0),
+                      ).animate(animation);
 
-                    return SlideTransition(
-                        position: slideAnimation, child: child);
-                  },
-                  child: Image.asset(
-                    planetList[selectedPlanetIndex].gif,
-                    key: ValueKey(
-                        selectedPlanetIndex), // Ensure smooth transition
-                    height: 250,
+                      return SlideTransition(
+                          position: slideAnimation, child: child);
+                    },
+                    child: Image.asset(
+                      planetList[selectedPlanetIndex].gif,
+                      key: ValueKey(
+                          selectedPlanetIndex), // Ensure smooth transition
+                      height: 250,
+                    ),
                   ),
                 ),
               ],
