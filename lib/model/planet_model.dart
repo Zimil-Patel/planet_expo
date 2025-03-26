@@ -8,12 +8,14 @@ class Planet {
   final String gif;
   final String name;
   final String secondName;
+  final String description;
   final PlanetDetails details;
 
   Planet({
     required this.gif,
     required this.name,
     required this.secondName,
+    required this.description,
     required this.details,
   });
 
@@ -22,6 +24,7 @@ class Planet {
       gif: 'assets/gif/${json['name'].toString().toLowerCase()}.gif',
       name: json['name'],
       secondName: json['secondName'],
+      description: json['description'],
       details: PlanetDetails.fromJson(
         json['details'],
       ),

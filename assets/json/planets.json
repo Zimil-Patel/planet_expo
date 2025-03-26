@@ -12,7 +12,8 @@
         "Length of Year": "N/A",
         "Length of Day": "25-35 Earth days",
         "Temperature": "Surface: 5,778 K, Core: ~15 million K"
-      }
+      },
+      "description": "The Sun is the star at the center of our solar system, providing the light and heat that sustains life on Earth. It's a massive ball of hot, ionized gas."
     },
     {
       "name": "Mercury",
@@ -26,7 +27,8 @@
         "Length of Year": "88 earth days",
         "Length of Day": "1407.6 h",
         "Temperature": "Average 167 C"
-      }
+      },
+      "description": "Mercury is the smallest and innermost planet in the Solar System. It's a rocky world with extreme temperature variations due to its lack of atmosphere."
     },
     {
       "name": "Venus",
@@ -40,7 +42,8 @@
         "Length of Year": "224.7 earth days",
         "Length of Day": "5832.5 h",
         "Temperature": "Average 464 C"
-      }
+      },
+      "description": "Venus is Earth's closest planetary neighbor, but its thick atmosphere traps heat, making it the hottest planet in our solar system. It rotates very slowly."
     },
     {
       "name": "Earth",
@@ -54,7 +57,8 @@
         "Length of Year": "365.25 earth days",
         "Length of Day": "24 h",
         "Temperature": "Average 15 C"
-      }
+      },
+      "description": "Earth is the only known planet to support life, with a diverse ecosystem and a protective atmosphere. It's unique for having liquid water on its surface."
     },
     {
       "name": "Mars",
@@ -68,7 +72,8 @@
         "Length of Year": "687 earth days",
         "Length of Day": "24 h 37min",
         "Temperature": "Average -62.78 C"
-      }
+      },
+      "description": "Mars is a cold, desert world with a thin atmosphere. It's known for its reddish appearance and is a target for future human exploration due to evidence of past liquid water."
     },
     {
        "name": "Jupiter",
@@ -82,7 +87,8 @@
             "Length of Year": "11.86 earth years",
             "Length of Day": "9 h 56 min",
             "Temperature": "Average -145 C"
-        }
+        },
+        "description": "Jupiter is the largest planet in our solar system, a gas giant with a powerful magnetic field and numerous moons. It's famous for its Great Red Spot, a massive storm."
     },
     {
         "name": "Saturn",
@@ -96,7 +102,8 @@
             "Length of Year": "29.46 earth years",
             "Length of Day": "10 h 42 min",
             "Temperature": "Average -178 C"
-        }
+        },
+        "description": "Saturn is known for its spectacular ring system, made up of ice and rock particles. It's another gas giant with a large family of moons, including Titan, which has a thick atmosphere."
     },
     {
         "name": "Uranus",
@@ -110,7 +117,8 @@
             "Length of Year": "84.01 earth years",
             "Length of Day": "17 h 14 min",
             "Temperature": "Average -224 C"
-        }
+        },
+        "description": "Uranus is an ice giant with a unique sideways tilt, causing extreme seasonal variations. It has a faint ring system and numerous moons. It has a blue colour due to methane in its atmosphere."
     },
     {
         "name": "Neptune",
@@ -124,8 +132,8 @@
             "Length of Year": "164.8 earth years",
             "Length of Day": "16 h 6 min",
             "Temperature": "Average -214 C"
-        }
+        },
+        "description": "Neptune is the farthest major planet from the Sun, an ice giant with strong winds and a vibrant blue color. It has a dynamic atmosphere and several moons, including Triton."
     }
-
   ]
 }
